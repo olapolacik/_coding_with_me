@@ -12,7 +12,7 @@ public class AgeVeryfication {
         if(age >= 18){
             System.out.println("Jestes pelnoletni");
         }
-        else if(age < 18){
+        else {
             System.out.println("Nie jestes pelnoletni!");
         }
     }
