@@ -4,33 +4,32 @@ import static java.lang.Math.*;
 // program do obliczenia BMI!
 public class CalculatorBMI {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Scanner sc1 = new Scanner(System.in);
         System.out.println("Podaj swoj wzrost: ");
-        double wzrost = sc1.nextDouble();
+        double wzrost = sc.nextDouble();
 
-        Scanner sc2 = new Scanner(System.in);
         System.out.println("Podaj swoja wage: ");
-        double waga = sc2.nextDouble();
+        double waga = sc.nextDouble();
 
-        double BMI = waga / Math.pow(wzrost/100, 2);
+        double bmi = waga / Math.pow(wzrost/100, 2);
         System.out.println("Twoje BMI wynosi: ");
-        System.out.format("%.2f%n", BMI);
+        System.out.format("%.2f%n", bmi);
 
-        System.out.println("Interpretacja wyniku: ");
-        if(BMI <= 18.5){
-            System.out.print("niedowaga");
+        System.out.print("Interpretacja wyniku: ");
+        if(bmi <= 18.5){
+            System.out.println("niedowaga");
         }
-        else if(BMI <= 24.9){
+        else if(bmi <= 24.9){
             System.out.println("waga prawidlowa");
         }
-        else if(BMI < 29.9){
+        else if(bmi <= 29.9){
             System.out.println("nadwaga");
         }
-        else if(BMI <= 34.9){
+        else if(bmi <= 34.9){
             System.out.println("otylosc 1 stopnia");
         }
-        else if(BMI <= 39.9){
+        else if(bmi <= 39.9){
             System.out.println("otylosc 2 stopnia");
         }
         else{
